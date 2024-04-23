@@ -12,8 +12,8 @@ book_title = st.text_input("Please Enter Book Title")
 
 def book_details(book_title):
     base_url = "https://www.googleapis.com/books/v1/volumes"
-    params = {'q': book_title}
-
+    params = {'q': book_title, 'country': 'US'}
+    
     response = requests.get(base_url, params=params)
     data = response.json()
 
