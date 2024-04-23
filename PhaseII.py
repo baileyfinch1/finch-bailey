@@ -5,8 +5,8 @@ import os
 st.title("Your Online Bookshelf")
 st.markdown("Welcome to Your Online Bookshelf! An app where you can search for any book and instantly receive information about it. Don't forget to leave a rating!")
 
-image_path = os.path.join(os.path.expanduser("~"), "Downloads", "WebDevelopmentLab03", "images", "bookshelf.jpeg")
-st.image(image_path, caption="Bookshelf", use_column_width=True)
+cover = "images/bookshelf.jpeg"
+st.image(cover)
 
 book_title = st.text_input("Please Enter Book Title")
 
@@ -58,13 +58,11 @@ like_reading = st.checkbox("Check if you love reading")  # NEW: Checkbox Input
 
 if like_reading:
     st.write("Go read, you deserve it!")
-    image_path = os.path.join(os.path.expanduser("~"), "Downloads", "WebDevelopmentLab03", "images", "goodday.jpeg")
-    st.image(image_path,caption="Have a Great Day", use_column_width=True)
+    st.image("images/goodday.jpeg")
 
 else:
     st.warning("Its ok if you don't, thats why they make movies.")
-    image_path = os.path.join(os.path.expanduser("~"), "Downloads", "WebDevelopmentLab03", "images", "niceday.jpeg")
-    st.image(image_path, use_column_width=True)
+    st.image("images/niceday.jpeg")
 
 st.markdown("---")
 st.markdown("Created by Bailey Finch")
