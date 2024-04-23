@@ -27,6 +27,7 @@ def book_details(book_title):
 
         return title, authors, description, image_link
     else:
+        st.write(f"Book not found. API response: {data}")
         return None
 
 if st.button("Search"):  # NEW: Button
